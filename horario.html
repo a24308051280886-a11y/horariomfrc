@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horario Escolar</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background-color: #ffffff;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+    }
+
+    /* Tabla de Horario */
+    .schedule-table {
+      width: 100%;
+      max-width: 600px;
+      border-collapse: collapse;
+      table-layout: fixed;
+      border: 1px solid #000;
+    }
+
+    .schedule-table th, .schedule-table td {
+      border: 1px solid #000;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 10px;
+      padding: 3px 1px;
+      word-wrap: break-word;
+    }
+
+    .time-col {
+      width: 45px;
+      font-size: 10px;
+      color: #555;
+      background-color: #fff;
+    }
+
+    .header-5j {
+      color: #3bb2cb;
+      font-size: 16px;
+      font-weight: bold;
+      background-color: #fff;
+    }
+
+    .header-day {
+      color: #3bb2cb;
+      font-size: 12px;
+      font-weight: normal;
+      background-color: #fff;
+    }
+
+    .recreo-row td {
+      background-color: #e3ebf5;
+      color: #3bb2cb;
+      font-size: 11px;
+      padding: 1px;
+      border-top: 1px solid #000;
+      border-bottom: 1px solid #000;
+    }
+
+    /* Colores por Materia */
+    .m-ch2 { background-color: #dedb43; color: #000; }          /* CH 2 - Amarillo Claro */
+    .m-apli-adm { background-color: #bcbe2d; color: #000; }     /* Apli. Adm - Verde Oliva / Amarillo Oscuro */
+    .m-ingles { background-color: #c98c34; color: #000; }       /* Ingles 5 - Café / Ocre */
+    .m-m4s1 { background-color: #f15a24; color: #000; font-weight: bold; } /* PROG M4S1 - Naranja */
+    .m-cneyt { background-color: #7cc524; color: #000; }        /* CNEyT 5 - Verde Lima */
+    .m-m4s2 { background-color: #a7a9ac; color: #000; }        /* PROG M4S2 - Gris */
+    .m-fs { background-color: #662d91; color: #fff; font-weight: bold; }   /* FS - Morado */
+    .m-tsdm2 { background-color: #009345; color: #000; }       /* TSdM 2 - Verde Oscuro */
+
+    .materia-title {
+      font-weight: normal;
+      display: block;
+      line-height: 1.1;
+    }
+
+    .docente-name {
+      display: block;
+      font-size: 9.5px;
+      line-height: 1.1;
+    }
+
+    .aula-text {
+      font-weight: bold;
+      font-size: 9.5px;
+      display: block;
+      line-height: 1.1;
+    }
+  </style>
+</head>
+<body>
+
+  <table class="schedule-table">
+    <thead>
+      <tr>
+        <th class="time-col" style="border: none;"></th>
+        <th colspan="5" class="header-5j">5J</th>
+      </tr>
+      <tr>
+        <th class="time-col">📖</th>
+        <th class="header-day">Lunes</th>
+        <th class="header-day">Martes</th>
+        <th class="header-day">Miércoles</th>
+        <th class="header-day">Jueves</th>
+        <th class="header-day">Viernes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- 7:00 - 8:00 -->
+      <tr>
+        <td class="time-col">7:00<br>8:00</td>
+        <td></td>
+        <td class="m-ch2">
+          <span class="materia-title">5* CH 2</span>
+          <span class="docente-name">Juarez</span>
+          <span class="aula-text">AULA 38</span>
+        </td>
+        <td class="m-apli-adm">
+          <span class="materia-title">5* Apli. Adm</span>
+          <span class="docente-name">Estrada</span>
+          <span class="aula-text">AULA 38</span>
+        </td>
+        <td class="m-apli-adm">
+          <span class="materia-title">5* Apli. Adm</span>
+          <span class="docente-name">Estrada</span>
+          <span class="aula-text">AULA 38</span>
+        </td>
+        <td class="m-ingles">
+          <span class="materia-title">5* Ingles 5</span>
+          <span class="docente-name">Terrazas</span>
+          <span class="aula-text">AULA 38</span>
+        </td>
+      </tr>
+
+      <!-- 8:00 - 9:00 -->
+      <tr>
+        <td class="time-col">8:00<br>9:00</td>
+        <td></td>
+        <td class="m-apli-adm">
+          <span class="materia-title">5* Apli. Adm</span>
+          <span class="docente-name">Estrada</span>
+          <span class="aula-text">AULA 38</span>
+        </td>
+        <td class="m-ch2">
+          <span class="materia-title">5* CH 2</span>
+          <span class="docente-name">Juarez</span>
+          <span class="aula-text">AULA 38</span>
+        </td>
+        <td class="m-ingles">
+          <span class="materia-title">5* Ingles 5</span>
+          <span class="docente-name">Terrazas</span>
+          <span class="aula-text">AULA 38</span>
+        </td>
+        <td class="m-ch2">
+          <span class="materia-title">5* CH 2</span>
+          <span class="docente-name">Juarez</span>
+          <span class="aula-text">AULA 38</span>
+        </td>
+      </tr>
+
+      <!-- 9:00 - 10:00 -->
+      <tr>
+        <td class="time-col">9:00<br>10:00</td>
+        <td class="m-ingles">
+          <span class="materia-title">5* Ingles 5</span>
+          <span class="docente-name">Terrazas</span>
+          <span class="aula-text">AULA 38</span>
+        </td>
+        <td class="m-m4s1" rowspan="2">
+          <span class="materia-title">PROG M4S1</span>
+          <span class="docente-name">Meza</span>
+          <span class="aula-text">AULA 38</span>
+        </td>
+        <td class="m-m4s1">
+          <span class="materia-title">PROG M4S1</span>
+          <span class="docente-name">Meza</span>
+          <span class="aula-text">AULA 38</span>
+        </td>
+        <td class="m-m4s1" rowspan="2">
+          <span class="materia-title">PROG M4S1</span>
+          <span class="docente-name">Meza</span>
+          <span class="aula-text">AULA 38</span>
+        </td>
+        <td class="m-m4s1" rowspan="2">
+          <span class="materia-title">PROG M4S1</span>
+          <span class="docente-name">Meza</span>
+          <span class="aula-text">AULA 38</span>
+        </td>
+      </tr>
+
+      <!-- 10:00 - 10:50 -->
+      <tr>
+        <td class="time-col">10:00<br>10:50</td>
+        <td class="m-cneyt">
+          <span class="materia-title">5* CNEyT 5</span>
+          <span class="docente-name">Reyes</span>
+          <span class="aula-text">AULA 38</span>
+        </td>
+        <td class="m-ingles">
+          <span class="materia-title">5* Ingles 5</span>
+          <span class="docente-name">Terrazas</span>
+          <span class="aula-text">AULA 38</span>
+        </td>
+      </tr>
+
+      <!-- RECREO -->
+      <tr class="recreo-row">
+        <td colspan="6">recreo</td>
+      </tr>
+
+      <!-- 11:10 - 12:00 -->
+      <tr>
+        <td class="time-col">11:10<br>12:00</td>
+        <td class="m-m4s2">
+          <span class="materia-title">PROG M4S2</span>
+          <span class="docente-name">Gonzales A</span>
+          <span class="aula-text">AULA 38</span>
+        </td>
+        <td class="m-m4s2">
+          <span class="materia-title">PROG M4S2</span>
+          <span class="docente-name">Gonzales A</span>
+          <span class="aula-text">AULA 38</span>
+        </td>
+        <td class="m-cneyt" rowspan="2">
+          <span class="materia-title">5* CNEyT 5</span>
+          <span class="docente-name">Reyes</span>
+          <span class="aula-text">AULA 38</span>
+        </td>
+        <td class="m-m4s2">
+          <span class="materia-title">PROG M4S2</span>
+          <span class="docente-name">Gonzales A</span>
+          <span class="aula-text">AULA 38</span>
+        </td>
+        <td class="m-cneyt">
+          <span class="materia-title">5* CNEyT 5</span>
+          <span class="docente-name">Reyes</span>
+          <span class="aula-text">AULA 38</span>
+        </td>
+      </tr>
+
+      <!-- 12:00 - 13:00 -->
+      <tr>
+        <td class="time-col">12:00<br>13:00</td>
+        <td class="m-fs">
+          <span class="materia-title">5* FS</span>
+          <span class="docente-name">Meza</span>
+          <span class="aula-text">AULA 38</span>
+        </td>
+        <td class="m-ingles">
+          <span class="materia-title">5* Ingles 5</span>
+          <span class="docente-name">Terrazas</span>
+          <span class="aula-text">AULA 38</span>
+        </td>
+        <td class="m-m4s2">
+          <span class="materia-title">PROG M4S2</span>
+          <span class="docente-name">Gonzales A</span>
+          <span class="aula-text">AULA 38</span>
+        </td>
+        <td class="m-m4s2">
+          <span class="materia-title">PROG M4S2</span>
+          <span class="docente-name">Gonzales A</span>
+          <span class="aula-text">AULA 38</span>
+        </td>
+      </tr>
+
+      <!-- 13:00 - 14:00 -->
+      <tr>
+        <td class="time-col">13:00<br>14:00</td>
+        <td class="m-tsdm2">
+          <span class="materia-title">5* TSdM 2</span>
+          <span class="docente-name">Macias</span>
+          <span class="aula-text">AULA 38</span>
+        </td>
+        <td class="m-tsdm2">
+          <span class="materia-title">5* TSdM 2</span>
+          <span class="docente-name">Macias</span>
+          <span class="aula-text">AULA 38</span>
+        </td>
+        <td class="m-tsdm2">
+          <span class="materia-title">5* TSdM 2</span>
+          <span class="docente-name">Macias</span>
+          <span class="aula-text">AULA 38</span>
+        </td>
+        <td class="m-tsdm2">
+          <span class="materia-title">5* TSdM 2</span>
+          <span class="docente-name">Macias</span>
+          <span class="aula-text">AULA 38</span>
+        </td>
+        <td class="m-tsdm2">
+          <span class="materia-title">5* TSdM 2</span>
+          <span class="docente-name">Macias</span>
+          <span class="aula-text">AULA 38</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
